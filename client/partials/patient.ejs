@@ -1,0 +1,31 @@
+<form class="form-horizontal" role="form" ng-submit="addPatient()">
+	<div class="form-signin">
+		<p><label class="col-sm-2 control-label">Name:</label> 
+		<input type="text" ng-model="patient.name"></p>
+		<p><label class="col-sm-2 control-label">Phone Number:</label>
+		<input type='string' placeholder="XXX-XXX-XXXX" ng-model="patient.phone"></p>
+		<p><label class="col-sm-2 control-label">Appointment Date:</label>
+		<input type='string' placeholder="YYYY-MM-DD" ng-model="patient.appointment"></p>
+		<p><label class="col-sm-2 control-label">Time:</label> 
+		<input type='string' placeholder="HH:MM AM/PM" ng-model="patient.time"></p>
+		<p><label class="col-sm-2 control-label">Reason:</label>
+		<textarea ng-model="patient.reason" rows="7" cols="50"></textarea></p>
+		<p><label class="col-sm-2 control-label">Work Done:</label>
+		<textarea ng-model="patient.work_done" rows="7" cols="50"></textarea></p>
+		<p><label class="col-sm-2 control-label">Status:</label>
+		<select ng-model="patient.status">
+			<option value="Needs Appointment">Needs Appointment</option>
+			<option value="Receiving Treatment">Receiving Treatment</option>
+			<option value="Finished">Finished</option>
+		</select></p>
+		<p><label class="col-sm-2 control-label">Dentist:</label>
+		<select ng-model="patient.dentist">
+			<option value="Dr. One">Dr.One</option>
+			<option value="Dr. Two">Dr.Two</option>
+			<option value="Dr. Three">Dr.Three</option>
+		</select></p>
+		<p><label class="col-sm-2 control-label">X-Rays:</label>
+		<input type="file"></p>
+		<p><label class="col-sm-2 control-label"><input class="btn btn-primary" type="submit"></label></p>
+	</div>
+</form>

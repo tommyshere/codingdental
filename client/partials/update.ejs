@@ -1,0 +1,26 @@
+<form class="form-horizontal" role="form" ng-submit="updatePatient()">
+	<input type="hidden" value="{{patient._id}}" ng-modle="patient._id">
+	<p>Name: <input type="string" value="{{ patient.name }}" ng-model="patient.name"></p>
+	<p>Phone Number: <input type='string' value="{{ patient.phone }}" ng-model="patient.phone"></p>
+	<p>Appointment: <input type='string' ng-model="patient.appointment" value="{{ patient.appointment }}"></p>
+	{{patient.appointment}}
+	<p>Time: <input type='string' placeholder="HH:MM AM/PM" value="{{patient.time}}" ng-model="patient.time"></p>
+	<p>Reason:</p>
+	<p><textarea ng-model="patient.reason" value="{{patient.reason}}" rows="7" cols="50"></textarea></p>
+	<p>Work Done:</p>
+	<p><textarea ng-model="patient.work_done" value="{{patient.work_done}}" rows="7" cols="50"></textarea></p>
+	<p>Status: <select ng-model="patient.status">
+			<option selected value="{{patient.status}}">{{patient.status}}</option>
+			<option value="Needs Appointment">Needs Appointment</option>
+			<option value="Receiving Treatment">Receiving Treatment</option>
+			<option value="Finished">Finished</option>
+		</select></p>
+	<p>Dentist: 
+	<select ng-model="patient.dentist">
+			<option selected value="{{patient.dentist}}">{{ patient.dentist }}</option>
+			<option value="Dr. One">Dr.One</option>
+			<option value="Dr. Two">Dr.Two</option>
+			<option value="Dr. Three">Dr.Three</option>
+	</select></p>
+	<p><input class="btn btn-primary" type="submit">
+</form>
